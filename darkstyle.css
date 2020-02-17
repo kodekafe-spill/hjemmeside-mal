@@ -1,0 +1,407 @@
+*{
+    font-family: 'IBM Plex Mono', monospace;
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+}
+
+html{
+    height: 100%;
+    width:100%;
+    position: relative';
+}
+
+body{
+	margin: 0;
+    height: 100%;
+    width: 100%;
+	display: flex;
+    flex-direction: row;
+    background-color: black;
+    position: relative;
+}
+
+/*Sirkel-logo vises ikke på mindre skjermer*/
+#logo{
+    display: none;
+}
+
+ul{
+    margin-top: 80px;
+}
+
+/*neste dato, tall + en høyre border-linje*/
+#leftcolumn{
+    border-right: 1px solid rgb(113, 199, 102);
+    margin-left: 10px;
+    flex-grow: 1;
+    display:flex;
+    flex-direction: row;
+    text-align: right;
+    height: 100%;
+    
+}
+
+/*neste dato*/
+#next{
+    flex-grow: 2;
+    color: rgb(226, 223, 207);
+    font-size: 35px;
+	margin-right: 5px;
+}
+
+/*linjer med tall*/
+#line_numbers{
+    color: rgb(113, 199, 102);
+    text-align: right;
+    margin-right: 10px;
+    flex-grow: 1;
+}
+
+/*ren dekorasjon, for å få to av border-linjene*/
+#middlecolumn{
+    border-left: 1px solid rgb(113, 199, 102);
+    border-right: 1px solid rgb(113, 199, 102);
+    flex-grow: 1;
+    margin-left: 5px;
+    max-width: 7px;
+	min-width: 7px;
+}
+
+/*hovedinnhold*/
+#rightcolumn{
+    margin-left: 5px;
+    flex-grow: 7;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar{
+    font-size: 18px;
+    padding-bottom: 10px;
+    width: 100%;
+    top:0;
+    
+
+}
+
+.main-nav{
+    list-style-type: none;
+    display: none;
+}
+
+.nav-links,
+.hello-world {
+    text-decoration: none;
+    color: rgb(113, 199, 102);
+    
+}
+
+.main-nav li{
+    text-align: right;
+    margin: 15px auto;
+    padding:15px;
+    
+}
+
+/*hamburger*/
+.navbar-toggle{
+    position: absolute;
+    margin-top:15px;
+    right:10px;
+    cursor:pointer;
+    color: rgb(113, 199, 102);
+    font-size: 30px;
+}
+
+.active{
+    display:block;
+}
+
+/*lilla dekorasjonsbilde*/
+#lilla{
+    right:0;
+    position: absolute;
+    text-align: right;
+    display: block;
+
+}
+
+/*hello world vises ikke når skjermen er liten*/
+.hello-world{
+    display: none;
+}
+
+/*logo flyttes til navbar når skjermen er liten*/
+#navbar-logo{
+    float: left;
+    margin-bottom: 20px;
+    margin-top: 15px;
+    
+}
+
+/*tittel på hovedinnhold på hjem-siden*/
+.title{
+    font-size: 50px;
+    font-weight: bold;
+    color: rgb(113, 199, 102);
+}
+
+/*de andre sidene får litt mindre overskrift*/
+.andresider{
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(113, 199, 102);
+}
+
+/*selve hovedinnholdet i hovedcontainer*/
+#main{
+    padding: 14px;
+    color: rgb(226, 223, 207);
+    margin-bottom: 10px;
+	flex-grow: 4;
+	
+}
+
+/*styrer innrykk så kode ser mer realistisk ut*/
+.indent{
+    margin-left: 20px;
+}
+
+/*bunntekst og google-maps iframe*/
+#footer{
+    border-top: 2px solid rgb(226, 223, 207);
+    margin-left: 14px;
+    margin-right: 100px;
+    margin-top: 10px;
+    color:rgb(226, 223, 207);
+    padding-top: 20px;
+	flex-grow:1;
+}
+
+#text{
+    float: left;
+}
+
+/*div-container til iframe*/
+#image{
+    float:right;
+    padding-top: 20px;
+    
+}
+
+/*span element gjør at litt av teksten får annen farge*/
+.color{
+    color: rgb(116, 64, 111);
+}
+
+/*teksten i footer endres, vises ikke nå*/
+#liten_footer{
+    display: none;
+}
+
+/*@media for desktop*/
+@media screen and (min-width: 1170px){
+    .navbar{
+        display: flex;
+        justify-content: flex-end;
+        padding-bottom: 0;
+        height: 70px;
+        align-items: right;
+        background-color: transparent;
+        margin-right: 15%;
+        width: 90%;
+        top:0;
+
+    }
+    /*google maps til mobil fjernes*/
+    #mobil_maps{
+        display:none;
+    }
+
+    /*Sidene om_oss, hva_gjør_vi og prosjekter får endret font-size*/
+    .andresider{
+        font-size: 50px;
+        font-weight: bold;
+        color: rgb(113, 199, 102);
+    }
+
+    ul{
+        margin-top: 40px;
+    }
+    /*tittel på hjem-side blir større på desktop*/
+    .title{
+        font-size: 70px;
+        font-weight: bold;
+        color: rgb(113, 199, 102);
+    }
+
+    /*listen blir synlig og linkene vises som row*/
+    .main-nav{
+        display: flex;
+        margin-right: 30px;
+        flex-direction: row;
+        right:0;
+    }
+
+    .main-nav li{
+        margin:0;
+    }
+
+    .nav-links{
+        margin-left: 40px;
+    }
+
+    /*hello world blir synlig når det er plass*/
+    .hello-world{
+        display: inline-block;
+        font-size: 20px;
+        margin-left: 20px;
+    }
+
+    /*hamburger fjernes*/
+    .navbar-toggle{
+        display: none;
+    }
+
+    /*iframe får endret width*/
+    iframe{
+        width: 500px;
+    }
+    
+    /*navbar logo fjernes*/
+    #navbar-logo{
+        display: none;
+    }
+
+    #main{
+        margin-top: 50px;
+    }
+
+    /*div er lagt nederst, under #header og #main-div så linkene i nav ikke blir dekket av bildet*/
+    #logo{
+        right:0;
+        position: absolute;
+        text-align: right;
+        display: block;
+    }
+
+    /*div er lagt nederst, under #header, #main-div og #logo så linkene i nav ikke blir dekket av bildet*/
+    #lilla{
+        right:0;
+        position: absolute;
+        text-align: right;
+        display: block;
+    }   
+} /*slutt på desktop @media*/
+
+/*@media til mobilskjermer med mindre enn 800px*/
+@media screen and (max-width: 800px){
+
+    body{
+        height: 100%;
+        width: 100%;
+        background-color: black;    
+    }
+
+    /*venstre kolonne får max-width for å gjøre plass*/
+    #leftcolumn{
+        max-width: 40px;
+    }
+
+    /*høyre kolonne får min-width*/
+    #rightcolumn{
+        min-width: 300px;
+    }
+
+    /*kolonnen i midten forsvinner*/
+    #middlecolumn{
+        display:none;
+    }
+
+    /*hello world forsvinner på liten skjerm*/
+    .hello-world{
+        display: none;
+    }
+
+    /*lilla dekorasjonsbilde blir mindre for å passe mindre skjermer*/
+    #lillabilde{
+        height: 400px;
+    }
+
+    /*liten footer vises, gjør endringer i teksten i footer så linjene ikke brytes*/
+    #liten_footer{
+        display:block;
+    }
+
+    /*stor footer vises ikke*/
+    #stor_footer{
+        display:none;
+    }
+
+    #main{
+        position: relative;
+    }
+}/*slutt på mobil @media*/
+
+
+/*når skjerm når 960px eller mindre fjernes #next-div for å gi mer plass*/
+@media screen and (max-width: 960px){
+    #next{
+        display: none;
+    }
+}/*slutt på #next @media*/
+
+/*Når vinduet blir mindre enn gitt vidde vil maps iframe bli mindre*/
+@media only screen and (max-width: 1470px){
+	iframe{
+		width: 300px;
+	}
+}/*slutt på iframe @media*/
+
+/*elementer blir mindre når skjermen blir veldig liten for å gi mer plass*/
+@media screen and (max-width: 475px){
+    #info,
+    #footer{
+        font-size: 12px;
+    }
+
+    #mobil_maps{
+        width: 250px;
+    }
+
+    iframe{
+        width: 250px;
+    }
+
+    #rightcolumn{
+        position: relative;
+    }
+}/*slutt på mini skjerm @media*/
+
+/*når skjermen blir litt mindre enn desktop endres google-maps iframe og footer til fordel for bedre design*/
+@media screen and (max-width: 1260px){
+    #footer{
+        display: flex;
+        flex-direction: column;
+    }
+    #text{
+        float: left;
+    }
+
+    #mobil_maps{
+        display: flex;
+        margin: 16px;
+        justify-content: left;
+    }
+    
+    #image{
+        display:none;
+    }
+
+    #leftcolumn{
+        min-height: 900px;
+    }
+}/*slutt på maps @media*/
+
+
