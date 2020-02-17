@@ -342,6 +342,10 @@ ul{
     #main{
         position: relative;
     }
+
+    #footer{
+        margin-right: 5%;
+    }
 }/*slutt på mobil @media*/
 
 
