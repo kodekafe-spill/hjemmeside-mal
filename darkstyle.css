@@ -21,31 +21,6 @@ body{
     position: relative;
 }
 
-#hjem{
-    display:none;
-}
-
-#om_oss{
-    display:none;
-}
-
-#hva_gjor_vi{
-    display:none;
-}
-
-#prosjekter{
-    display:none;
-}
-
-/*Sirkel-logo vises ikke på mindre skjermer*/
-#logo{
-    display: none;
-}
-
-ul{
-    margin-top: 80px;
-}
-
 /*neste dato, tall + en høyre border-linje*/
 #leftcolumn{
     border-right: 1px solid rgb(113, 199, 102);
@@ -91,6 +66,23 @@ ul{
     flex-direction: column;
 }
 
+/*innholdscontainere*/
+#hjem,
+#om_oss,
+#hva_gjor_vi,
+#prosjekter{
+    display:none;
+}
+
+/*Sirkel-logo vises ikke på mindre skjermer*/
+#logo{
+    display: none;
+}
+
+ul{
+    margin-top: 80px;
+}
+
 .navbar{
     font-size: 18px;
     padding-bottom: 10px;
@@ -115,7 +107,7 @@ ul{
     padding:15px;
 }
 
-/*hamburger*/
+/*hamburger-meny*/
 .navbar-toggle{
     position: absolute;
     margin-top:15px;
@@ -132,6 +124,7 @@ ul{
     font-size: 30px;
 }
 
+/*farge switch-ikon*/
 .fa{
     color: rgb(113, 199, 102);
 }
@@ -148,7 +141,7 @@ ul{
     display: block;
 }
 
-/*hello world vises ikke når skjermen er liten*/
+/*hello world vises ikke når skjermen er liten for å gi plass/gjøre det ryddig*/
 .hello-world{
     display: none;
 }
@@ -247,11 +240,12 @@ ul{
         font-size: 30px;
     }
     
+    /*farge til switch-ikon*/
     .fa{
         color: rgb(113, 199, 102);
     }
 
-    /*Sidene om_oss, hva_gjør_vi og prosjekter får endret font-size*/
+    /*Sidene om_oss, hva_gjør_vi og prosjekter får endret font-size på tittel*/
     .andresider{
         font-size: 50px;
         font-weight: bold;
@@ -328,11 +322,6 @@ ul{
         text-align: right;
         display: block;
     }   
-
-    #hjem{
-        display:none;
-    }
-    
 } /*slutt på desktop @media*/
 
 /*@media til mobilskjermer med mindre enn 800px*/
