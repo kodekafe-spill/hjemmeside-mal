@@ -4,20 +4,23 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Hjem | Kodekafé</title>
-        <link rel="stylesheet" href="darkstyle.css">
+        <link type="text/css" rel="stylesheet" media="all" href="darkstyle.css" id="theme_css">
         <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
         <link rel="icon" href="ikon.png">
         <script type="text/javascript" src="script.js"></script>
+        <script type="text/javascript" src="switch_script.js"></script>
     </head>
     <body>
+    
         <div id="leftcolumn">
             <div id="next">
                 <br><br><br><br><br>
                 <p>
                     nesteDato:<br>
                     06. mars<br>
-                    kl 17            
+                    kl 17
+                
                 </p>
             </div>
             <div id="line_numbers">
@@ -72,25 +75,29 @@
         </div>
         <div id="middlecolumn"></div>
         <div id="rightcolumn">
-
+        
             <nav class="navbar">
                 <span class="navbar-toggle" id="js-navbar-toggle">
                     <i class="fa fa-bars"></i>
                 </span>
+                <div id="switch"><a href="index_light.html"><i class="fa fa-toggle-on"></i></a></div>
                 <div id="navbar-logo"><img src="baretekst_logo.png" style="z-index: -1;" height="50px"></div>
-
+                
+                
                     <ul class="main-nav" id="js-menu">
-                        <li><a href="index.html" class="nav-links">&lt;&lt;&lt;hjem</a></li>
-                        <li><a href="om_oss.html" class="nav-links">&lt;&lt;&lt;om_oss</a></li>
-                        <li><a href="hva_gjor_vi.html" class="nav-links">&lt;&lt;&lt;hva_gjør_vi?</a></li>
-                        <li><a href="prosjekter.html" class="nav-links">&lt;&lt;&lt;prosjekter</a></li>
+                        <li><a href="#" onclick="hjem()"  class="nav-links">&lt;&lt;&lt;hjem</a></li>
+                        <li><a href="#" onclick="om_oss()"  class="nav-links">&lt;&lt;&lt;om_oss</a></li>
+                        <li><a href="#" onclick="hva_gjor_vi()"  class="nav-links">&lt;&lt;&lt;hva_gjør_vi?</a></li>
+                        <li><a href="#" onclick="prosjekter()"  class="nav-links">&lt;&lt;&lt;prosjekter</a></li>
+                        </li>
+
                     </ul>
             </nav>
 
             <div id="logo" style="z-index: -1;"><img src="logo.png" height="400px"></div>
             <div id="lilla" style="z-index: -2;"><img id="lillabilde" src="lilla.png" height="600px"></div>
 
-            <div id="main">
+            <div id="hjem">
                 <p>
                     <div id="test1"><p id="hello" class="hello-world">&lt;&lt;&lt;Hello_World!</p></div>
                     <span class="title">kodekafé</span></p><br>
@@ -106,9 +113,36 @@
                         >>> enter age:__<br>
                         >>> if age >= 13 and <= 19:<br>
                         <span class="indent">print('kom på kodekafé')</span><br>
-                    </p>
                 </p>
             </div>
+
+            <div id="om_oss">
+                <p>
+                    <div id="test1"><p id="hello" class="hello-world">&lt;&lt;&lt;Hello_World!</p></div>
+                    <span class="andresider">om_oss</span></p><br>
+                    <p id="info">
+                        tekst
+                </p>
+            </div>
+
+            <div id="hva_gjor_vi">
+                <p>
+                    <div id="test1"><p id="hello" class="hello-world">&lt;&lt;&lt;Hello_World!</p></div>
+                    <span class="andresider">hva_gjør_vi</span></p><br>
+                    <p id="info">
+                        tekst
+                </p>
+            </div>       
+            
+            <div id="prosjekter">
+                <p>
+                    <div id="test1"><p id="hello" class="hello-world">&lt;&lt;&lt;Hello_World!</p></div>
+                    <span class="andresider">prosjekter</span></p><br>
+                    <p id="info">
+                        tekst
+                </p>
+            </div>
+
             <div id="footer">
                 <div id="text">
                     <p>
@@ -121,7 +155,6 @@
                         <span id="stor_footer">>>> print('Hello, World!' + \n + 'Velkommen til Apparat')</span>
                         <span id="liten_footer">>>> print('Hello, World!')<br>>>> print('Velkommen til Apparat')</span>
                     </p>
-
                 </div>
                 <div id="image">
 
@@ -141,5 +174,10 @@
 
         </div>
 
+        <script>
+            document.getElementById('buttonID').onclick = function () { 
+                document.getElementById('theme_css').href = 'lightstyle.css';
+            };
+        </script>
     </body>
 </html>

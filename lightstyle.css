@@ -1,5 +1,5 @@
 *{
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Ubuntu', sans-serif;
     box-sizing: border-box;
     padding:0;
     margin:0;
@@ -17,24 +17,8 @@ body{
     width: 100%;
 	display: flex;
     flex-direction: row;
-    background-color: black;
+    background-color: rgb(129,130,132);
     position: relative;
-}
-
-#hjem{
-    display:none;
-}
-
-#om_oss{
-    display:none;
-}
-
-#hva_gjor_vi{
-    display:none;
-}
-
-#prosjekter{
-    display:none;
 }
 
 /*Sirkel-logo vises ikke på mindre skjermer*/
@@ -46,9 +30,12 @@ ul{
     margin-top: 80px;
 }
 
+a{
+    font-weight: bold;
+}
+
 /*neste dato, tall + en høyre border-linje*/
 #leftcolumn{
-    border-right: 1px solid rgb(113, 199, 102);
     margin-left: 10px;
     flex-grow: 1;
     display:flex;
@@ -60,23 +47,14 @@ ul{
 /*neste dato*/
 #next{
     flex-grow: 2;
-    color: rgb(226, 223, 207);
+    color: white;
     font-size: 35px;
-	margin-right: 5px;
-}
-
-/*linjer med tall*/
-#line_numbers{
-    color: rgb(113, 199, 102);
-    text-align: right;
-    margin-right: 10px;
-    flex-grow: 1;
+    margin-right: 5px;
+    font-weight: 300;
 }
 
 /*ren dekorasjon, for å få to av border-linjene*/
 #middlecolumn{
-    border-left: 1px solid rgb(113, 199, 102);
-    border-right: 1px solid rgb(113, 199, 102);
     flex-grow: 1;
     margin-left: 5px;
     max-width: 7px;
@@ -91,8 +69,13 @@ ul{
     flex-direction: column;
 }
 
+#info{
+    max-width: 500px;
+    line-height: 1.6;
+}
+
 .navbar{
-    font-size: 18px;
+    font-size: 15px;
     padding-bottom: 10px;
     width: 100%;
     top:0;
@@ -106,7 +89,7 @@ ul{
 .nav-links,
 .hello-world {
     text-decoration: none;
-    color: rgb(113, 199, 102);
+    color: rgb(185, 177, 154);
 }
 
 .main-nav li{
@@ -121,7 +104,7 @@ ul{
     margin-top:15px;
     right:10px;
     cursor:pointer;
-    color: rgb(113, 199, 102);
+    color: rgb(185, 177, 154);
     font-size: 30px;
 }
 
@@ -133,7 +116,7 @@ ul{
 }
 
 .fa{
-    color: rgb(113, 199, 102);
+    color: rgb(185, 177, 154);
 }
 
 .active{
@@ -146,11 +129,7 @@ ul{
     position: absolute;
     text-align: right;
     display: block;
-}
-
-/*hello world vises ikke når skjermen er liten*/
-.hello-world{
-    display: none;
+    opacity: 0.5;
 }
 
 /*logo flyttes til navbar når skjermen er liten*/
@@ -163,15 +142,15 @@ ul{
 /*tittel på hovedinnhold på hjem-siden*/
 .title{
     font-size: 50px;
-    font-weight: bold;
-    color: rgb(113, 199, 102);
+    font-weight: 300;
+    color: rgb(185, 177, 154);
 }
 
 /*de andre sidene får litt mindre overskrift*/
 .andresider{
     font-size: 40px;
     font-weight: bold;
-    color: rgb(113, 199, 102);
+    color: rgb(185, 177, 154);
 }
 
 /*selve hovedinnholdet i hovedcontainer*/
@@ -180,7 +159,7 @@ ul{
 #hva_gjor_vi,
 #prosjekter{
     padding: 14px;
-    color: rgb(226, 223, 207);
+    color: white;
     margin-bottom: 10px;
 	flex-grow: 4;
 }
@@ -192,11 +171,11 @@ ul{
 
 /*bunntekst og google-maps iframe*/
 #footer{
-    border-top: 2px solid rgb(226, 223, 207);
+    border-top: 2px solid rgb(185, 177, 154);
     margin-left: 14px;
     margin-right: 100px;
     margin-top: 10px;
-    color:rgb(226, 223, 207);
+    color:white;
     padding-top: 20px;
 	flex-grow:1;
 }
@@ -208,12 +187,11 @@ ul{
 /*div-container til iframe*/
 #image{
     float:right;
-    padding-top: 20px;
 }
 
 /*span element gjør at litt av teksten får annen farge*/
 .color{
-    color: rgb(116, 64, 111);
+    color: rgb(185, 177, 154);
 }
 
 /*teksten i footer endres, vises ikke nå*/
@@ -232,7 +210,7 @@ ul{
         background-color: transparent;
         margin-right: 15%;
         width: 90%;
-        top:0
+        top:0;
     }
 
     /*google maps til mobil fjernes*/
@@ -240,38 +218,25 @@ ul{
         display:none;
     }
 
-    #switch{
-        position: absolute;
-        margin-top:15px;
-        right:10px;
-        font-size: 30px;
-    }
-    
-    .fa{
-        color: rgb(113, 199, 102);
-    }
-
     /*Sidene om_oss, hva_gjør_vi og prosjekter får endret font-size*/
     .andresider{
         font-size: 50px;
         font-weight: bold;
-        color: rgb(113, 199, 102);
     }
 
     ul{
-        margin-top: 40px;
+        margin-top: 45px;
     }
     /*tittel på hjem-side blir større på desktop*/
     .title{
         font-size: 70px;
-        font-weight: bold;
-        color: rgb(113, 199, 102);
+        font-weight: 300;
     }
 
     /*listen blir synlig og linkene vises som row*/
     .main-nav{
         display: flex;
-        margin-right: 30px;
+        margin-right: 80px;
         flex-direction: row;
         right:0;
     }
@@ -282,13 +247,6 @@ ul{
 
     .nav-links{
         margin-left: 40px;
-    }
-
-    /*hello world blir synlig når det er plass*/
-    .hello-world{
-        display: inline-block;
-        font-size: 20px;
-        margin-left: 20px;
     }
 
     /*hamburger fjernes*/
@@ -306,11 +264,27 @@ ul{
         display: none;
     }
 
+    #switch{
+        position: absolute;
+        margin-top:15px;
+        right:10px;
+        font-size: 30px;
+    }
+    
+    .fa{
+        color: rgb(185, 177, 154);
+    }
+
     #hjem,
     #om_oss,
     #hva_gjor_vi,
     #prosjekter{
         margin-top: 50px;
+    }
+
+    #info{
+        font-size: 18px;
+        max-width: 500px;
     }
 
     /*div er lagt nederst, under #header og #main-div så linkene i nav ikke blir dekket av bildet*/
@@ -327,12 +301,12 @@ ul{
         position: absolute;
         text-align: right;
         display: block;
+        opacity: 0.5;
     }   
 
-    #hjem{
-        display:none;
+    #footer{
+        font-size: 18px;
     }
-    
 } /*slutt på desktop @media*/
 
 /*@media til mobilskjermer med mindre enn 800px*/
@@ -341,7 +315,7 @@ ul{
     body{
         height: 100%;
         width: 100%;
-        background-color: black;    
+        background-color: rgb(129,130,132);  
     }
 
     /*venstre kolonne får max-width for å gjøre plass*/
@@ -357,11 +331,6 @@ ul{
     /*kolonnen i midten forsvinner*/
     #middlecolumn{
         display:none;
-    }
-
-    /*hello world forsvinner på liten skjerm*/
-    .hello-world{
-        display: none;
     }
 
     /*lilla dekorasjonsbilde blir mindre for å passe mindre skjermer*/
@@ -399,18 +368,18 @@ ul{
     }
 }/*slutt på #next @media*/
 
-/*Når vinduet blir mindre enn gitt vidde vil maps iframe bli mindre*/
+/*Når vinduet blir mindre enn gitt vidde vil maps iframe bli mindre
 @media only screen and (max-width: 1470px){
 	iframe{
 		width: 300px;
 	}
-}/*slutt på iframe @media*/
+}slutt på iframe @media*/
 
 /*elementer blir mindre når skjermen blir veldig liten for å gi mer plass*/
 @media screen and (max-width: 475px){
     #info,
     #footer{
-        font-size: 12px;
+        font-size: 14px;
     }
 
     #rightcolumn{
@@ -451,16 +420,6 @@ ul{
     #leftcolumn{
         min-height: 900px;
     }
-
-    iframe{
-        width:500px;
-    }
 }/*slutt på maps @media*/
-
-@media screen and (max-width: 600px){
-    iframe{
-        width:250px;
-    }
-}
 
 
