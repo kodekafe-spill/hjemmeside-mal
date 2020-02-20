@@ -368,13 +368,6 @@ a{
     }
 }/*slutt på #next @media*/
 
-/*Når vinduet blir mindre enn gitt vidde vil maps iframe bli mindre
-@media only screen and (max-width: 1470px){
-	iframe{
-		width: 300px;
-	}
-}slutt på iframe @media*/
-
 /*elementer blir mindre når skjermen blir veldig liten for å gi mer plass*/
 @media screen and (max-width: 475px){
     #info,
