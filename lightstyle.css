@@ -21,19 +21,6 @@ body{
     position: relative;
 }
 
-/*Sirkel-logo vises ikke på mindre skjermer*/
-#logo{
-    display: none;
-}
-
-ul{
-    margin-top: 80px;
-}
-
-a{
-    font-weight: bold;
-}
-
 /*neste dato, tall + en høyre border-linje*/
 #leftcolumn{
     margin-left: 10px;
@@ -53,7 +40,7 @@ a{
     font-weight: 300;
 }
 
-/*ren dekorasjon, for å få to av border-linjene*/
+/*ren dekorasjon*/
 #middlecolumn{
     flex-grow: 1;
     margin-left: 5px;
@@ -69,9 +56,17 @@ a{
     flex-direction: column;
 }
 
-#info{
-    max-width: 500px;
-    line-height: 1.6;
+/*Sirkel-logo vises ikke på mindre skjermer*/
+#logo{
+    display: none;
+}
+
+ul{
+    margin-top: 80px;
+}
+
+a{
+    font-weight: bold;
 }
 
 .navbar{
@@ -86,8 +81,7 @@ a{
     display: none;
 }
 
-.nav-links,
-.hello-world {
+.nav-links{
     text-decoration: none;
     color: rgb(185, 177, 154);
 }
@@ -98,7 +92,7 @@ a{
     padding:15px;
 }
 
-/*hamburger*/
+/*hamburger meny*/
 .navbar-toggle{
     position: absolute;
     margin-top:15px;
@@ -123,8 +117,8 @@ a{
     display:block;
 }
 
-/*lilla dekorasjonsbilde*/
-#lilla{
+/*grått dekorasjonsbilde*/
+#grey{
     right:0;
     position: absolute;
     text-align: right;
@@ -164,9 +158,9 @@ a{
 	flex-grow: 4;
 }
 
-/*styrer innrykk så kode ser mer realistisk ut*/
-.indent{
-    margin-left: 20px;
+#info{
+    max-width: 500px;
+    line-height: 1.6;
 }
 
 /*bunntekst og google-maps iframe*/
@@ -271,10 +265,12 @@ a{
         font-size: 30px;
     }
     
+    /*fargevalg ikon*/
     .fa{
         color: rgb(185, 177, 154);
     }
 
+    
     #hjem,
     #om_oss,
     #hva_gjor_vi,
@@ -296,7 +292,7 @@ a{
     }
 
     /*div er lagt nederst, under #header, #main-div og #logo så linkene i nav ikke blir dekket av bildet*/
-    #lilla{
+    #grey{
         right:0;
         position: absolute;
         text-align: right;
@@ -333,21 +329,12 @@ a{
         display:none;
     }
 
-    /*lilla dekorasjonsbilde blir mindre for å passe mindre skjermer*/
-    #lillabilde{
+    /*grått dekorasjonsbilde blir mindre for å passe mindre skjermer*/
+    #grey_picture{
         height: 400px;
     }
 
-    /*liten footer vises, gjør endringer i teksten i footer så linjene ikke brytes*/
-    #liten_footer{
-        display:block;
-    }
-
-    /*stor footer vises ikke*/
-    #stor_footer{
-        display:none;
-    }
-
+    /*innholds-containere*/
     #hjem,
     #om_oss,
     #hva_gjor_vi,
