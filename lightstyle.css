@@ -1,3 +1,5 @@
+/*Alt utenfor @media er mobil/tablet/mindre skjermer. Noen @media tar tak i enda mindre skjermer for å gi bedre design*/
+
 *{
     font-family: 'Ubuntu', sans-serif;
     box-sizing: border-box;
@@ -51,7 +53,7 @@ body{
 	min-width: 7px;
 }
 
-/*hovedinnhold*/
+/*hovedinnhold - navbar, hoved-divs og footer*/
 #rightcolumn{
     margin-left: 5px;
     flex-grow: 7;
@@ -68,10 +70,12 @@ ul{
     margin-top: 80px;
 }
 
+/*linkene får tjukkere font*/
 a{
     font-weight: bold;
 }
 
+/*navigasjonsbar - hele header*/
 .navbar{
     font-size: 15px;
     padding-bottom: 10px;
@@ -79,23 +83,26 @@ a{
     top:0;
 }
 
+/*navigasjonsdelen av header - med linkene*/
 .main-nav{
     list-style-type: none;
     display: none;
 }
 
+/*selve linkene*/
 .nav-links{
     text-decoration: none;
     color: rgb(185, 177, 154);
 }
 
+/*listeelementene*/
 .main-nav li{
     text-align: right;
     margin: 15px auto;
     padding:15px;
 }
 
-/*hamburger meny*/
+/*hamburger meny - toggle for å vise nav-linkene på liten skjerm*/
 .navbar-toggle{
     position: absolute;
     margin-top:15px;
@@ -105,6 +112,7 @@ a{
     font-size: 30px;
 }
 
+/*toggle knapp for å bytte design*/
 #switch{
     position: absolute;
     margin-top:15px;
@@ -112,15 +120,17 @@ a{
     font-size: 30px;
 }
 
+/*farge på switch knapp*/
 .fa{
     color: rgb(185, 177, 154);
 }
 
+/*active klassen legges til når hamburgersymbol klikkes for å vise navbar på liten skjerm*/
 .active{
     display:block;
 }
 
-/*grått dekorasjonsbilde*/
+/*grått dekorasjonsbilde, legges underst (z-index) for å unngå konflikt med navbar/hovedinnhold*/
 #grey{
     right:0;
     position: absolute;
@@ -143,14 +153,14 @@ a{
     color: rgb(185, 177, 154);
 }
 
-/*de andre sidene får litt mindre overskrift*/
+/*de andre sidene (om oss, hva gjør vi, prosjekter) får litt mindre overskrift*/
 .andresider{
     font-size: 40px;
     font-weight: bold;
     color: rgb(185, 177, 154);
 }
 
-/*selve hovedinnholdet i hovedcontainer*/
+/*selve hovedinnholdet i hovedcontainer, divs som byttes på å vises*/
 #hjem,
 #om_oss,
 #hva_gjor_vi,
@@ -161,6 +171,7 @@ a{
 	flex-grow: 4;
 }
 
+/*info er selve infoteksten innenfor hoved-divs, ikke tittel*/
 #info{
     max-width: 500px;
     line-height: 1.6;
@@ -177,6 +188,7 @@ a{
 	flex-grow:1;
 }
 
+/*tekst i footer - adresse*/
 #text{
     float: left;
 }
@@ -186,18 +198,14 @@ a{
     float:right;
 }
 
-/*span element gjør at litt av teksten får annen farge*/
+/*span element gjør at litt av teksten i footer får annen farge*/
 .color{
     color: rgb(185, 177, 154);
 }
 
-/*teksten i footer endres, vises ikke nå*/
-#liten_footer{
-    display: none;
-}
-
-/*@media for desktop*/
+/*@media for desktop og større skjermer*/
 @media screen and (min-width: 1170px){
+    /*navigasjonsbar vises fullstendig på stor skjerm, alle linker vises*/
     .navbar{
         display: flex;
         justify-content: flex-end;
@@ -215,15 +223,17 @@ a{
         display:none;
     }
 
-    /*Sidene om_oss, hva_gjør_vi og prosjekter får endret font-size*/
+    /*Sidene om_oss, hva_gjør_vi og prosjekter får endret font-size på tittel*/
     .andresider{
         font-size: 50px;
         font-weight: bold;
     }
 
+    /*navbar liste*/
     ul{
         margin-top: 45px;
     }
+
     /*tittel på hjem-side blir større på desktop*/
     .title{
         font-size: 70px;
@@ -238,29 +248,32 @@ a{
         right:0;
     }
 
+    /*listeelementene*/
     .main-nav li{
         margin:0;
     }
 
+    /*selve "linkene"*/
     .nav-links{
         margin-left: 40px;
     }
 
-    /*hamburger fjernes*/
+    /*hamburger fjernes på stor skjerm når linker får plass*/
     .navbar-toggle{
         display: none;
     }
 
-    /*iframe får endret width*/
+    /*iframe får endret width for å passe skjerm bedre*/
     iframe{
         width: 500px;
     }
     
-    /*navbar logo fjernes*/
+    /*navbar logo fjernes når skjermen er stor nok til å vise vanlig logo*/
     #navbar-logo{
         display: none;
     }
 
+    /*toggle knappen for å endre design legges i navbar til høyre på stor skjerm*/
     #switch{
         position: absolute;
         margin-top:15px;
@@ -268,12 +281,12 @@ a{
         font-size: 30px;
     }
     
-    /*fargevalg ikon*/
+    /*fargevalg toggle-ikon*/
     .fa{
         color: rgb(185, 177, 154);
     }
 
-    
+    /*hoved-divs får margin-styling*/
     #hjem,
     #om_oss,
     #hva_gjor_vi,
@@ -281,12 +294,13 @@ a{
         margin-top: 80px;
     }
 
+    /*selve infoteksten på hver side*/
     #info{
         font-size: 18px;
         max-width: 500px;
     }
 
-    /*div er lagt nederst, under #header og #main-div så linkene i nav ikke blir dekket av bildet*/
+    /*div er lagt nederst, under navbar og hoved-divs så linkene i nav ikke blir dekket av bildet*/
     #logo{
         right:0;
         position: absolute;
@@ -294,7 +308,7 @@ a{
         display: block;
     }
 
-    /*div er lagt nederst, under #header, #main-div og #logo så linkene i nav ikke blir dekket av bildet*/
+    /*grått dekorasjonsbilde, div er lagt nederst, under navbar, hoved-divs og #logo så linkene i nav ikke blir dekket av bildet*/
     #grey{
         right:0;
         position: absolute;
@@ -303,10 +317,10 @@ a{
         opacity: 0.5;
     }   
 
+    /*hele footer får endre font size*/
     #footer{
         font-size: 18px;
     }
-    
 } /*slutt på desktop @media*/
 
 /*@media til mobilskjermer med mindre enn 800px*/
@@ -328,7 +342,7 @@ a{
         min-width: 300px;
     }
 
-    /*kolonnen i midten forsvinner*/
+    /*kolonnen i midten forsvinner for å gi plass*/
     #middlecolumn{
         display:none;
     }
@@ -338,7 +352,7 @@ a{
         height: 400px;
     }
 
-    /*innholds-containere*/
+    /*innholds-containere får relativ posisjon for bedre oppsett*/
     #hjem,
     #om_oss,
     #hva_gjor_vi,
@@ -346,6 +360,7 @@ a{
         position: relative;
     }
 
+    /*footer får mindre høyre-margin for å vise innhold bedre*/
     #footer{
         margin-right: 5%;
     }
@@ -371,6 +386,7 @@ a{
     }
 }/*slutt på mini skjerm @media*/
 
+/*endrer størrelse på google-maps for å passe skjermstørrelse bedre*/
 @media screen and (max-width: 560px){
     #mobil_maps{
         width: 250px;
@@ -379,7 +395,7 @@ a{
     iframe{
         width: 250px;
     }
-}
+}/*slutt på @media*/
 
 /*når skjermen blir litt mindre enn desktop endres google-maps iframe og footer til fordel for bedre design*/
 @media screen and (max-width: 1260px){
@@ -391,12 +407,14 @@ a{
         float: left;
     }
 
+    /*google maps flyttes under #text for å passe skjermen*/
     #mobil_maps{
         display: flex;
         margin: 16px;
         justify-content: left;
     }
     
+    /*vanlig google maps fjernes til fordel for en mindre*/
     #image{
         display:none;
     }
