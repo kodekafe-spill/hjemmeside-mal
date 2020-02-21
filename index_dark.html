@@ -5,11 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Kodekafé</title>
         <link type="text/css" rel="stylesheet" media="all" href="darkstyle.css" id="theme_css">
-        <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
-        <link rel="icon" href="ikon.png">
-        <script type="text/javascript" src="script.js"></script>
-        <script type="text/javascript" src="switch_script.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300&display=swap" rel="stylesheet"><!--fonten som brukes-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" ><!--siden som henter hamburger- og toggle-ikonene-->
+        <link rel="icon" href="ikon.png"><!--lite ikon i fanen-->
+        <script type="text/javascript" src="script.js"></script> <!--script som sikrer at siden er lastet før man kan klikke i navbar-->
+        <script type="text/javascript" src="switch_script.js"></script><!--script som bytter på å vise hoved-divs-->
     </head>
     <body>
     
@@ -22,7 +22,8 @@
                     kl 17
                 </p>
             </div>
-            
+
+            <!--linjenummerene i mørk versjon-->
             <div id="line_numbers">
                 <p>
                     103<br>
@@ -78,13 +79,17 @@
         <div id="rightcolumn">
         
             <nav class="navbar">
+                 <!--toggle-knapp for å vise navbar på mindre skjermer-->
                 <span class="navbar-toggle" id="js-navbar-toggle">
                     <i class="fa fa-bars"></i>
                 </span>
+
+                <!--toggle-knapp for å bytte design er link til den mørke versjonen-->
                 <div id="switch"><a href="index_light.html"><i class="fa fa-toggle-on"></i></a></div>
+                 <!--navbar-logo vises bare på små skjermer hvor stor logo ikke har plass-->
                 <div id="navbar-logo"><img src="baretekst_logo.png" style="z-index: -1;" height="50px"></div>
                 
-                
+                    <!--her kalles funksjonene som bytter på å vise ulike divs når du klikker på dem-->
                     <ul class="main-nav" id="js-menu">
                         <li><a href="#" onclick="hjem()"  class="nav-links">&lt;&lt;&lt;hjem</a></li>
                         <li><a href="#" onclick="om_oss()"  class="nav-links">&lt;&lt;&lt;om_oss</a></li>
@@ -93,9 +98,10 @@
                     </ul>
             </nav>
 
-            <div id="logo" style="z-index: -1;"><img src="logo.png" height="400px"></div>
-            <div id="lilla" style="z-index: -2;"><img id="lillabilde" src="lilla.png" height="600px"></div>
+            <div id="logo" style="z-index: -1;"><img src="logo.png" height="400px"></div><!--negativ z-index for å ikke kollidere med navigasjonsbar-->
+            <div id="lilla" style="z-index: -2;"><img id="lillabilde" src="lilla.png" height="600px"></div><!--negativ z-index for å ikke kollidere med navigasjonsbar eller logobilde-->
 
+             <!--hoved-div "hjem"-->
             <div id="hjem">
                 <p>
                     <div id="test1"><p id="hello" class="hello-world">&lt;&lt;&lt;Hello_World!</p></div>
@@ -115,30 +121,33 @@
                 </p>
             </div>
 
+             <!--hoved-div "om oss", her er det bare å fylle inn ønsket tekst i p-elementet med id="info"-->
             <div id="om_oss">
                 <p>
                     <div id="test1"><p id="hello" class="hello-world">&lt;&lt;&lt;Hello_World!</p></div>
                     <span class="andresider">om_oss</span></p><br>
                     <p id="info">
-                        tekst
+                        fyll inn tekst her
                 </p>
             </div>
 
+             <!--hoved-div "hva gjør vi", her er det bare å fylle inn ønsket tekst i p-elementet med id="info"-->
             <div id="hva_gjor_vi">
                 <p>
                     <div id="test1"><p id="hello" class="hello-world">&lt;&lt;&lt;Hello_World!</p></div>
                     <span class="andresider">hva_gjør_vi</span></p><br>
                     <p id="info">
-                        tekst
+                        fyll inn tekst her
                 </p>
             </div>       
             
+            <!--hoved-div "prosjekter", her er det bare å fylle inn ønsket tekst i p-elementet med id="info"-->
             <div id="prosjekter">
                 <p>
                     <div id="test1"><p id="hello" class="hello-world">&lt;&lt;&lt;Hello_World!</p></div>
                     <span class="andresider">prosjekter</span></p><br>
                     <p id="info">
-                        tekst
+                        fyll inn tekst her
                 </p>
             </div>
 
@@ -149,17 +158,19 @@
                         >>> x = din kunnskap nå<br>
                         >>> y = din kunnskap etter kodekafé<br>
                         >>> if x < y:<br>
-                        <span class="indent">print('Suksess')</span><br><br>
+                        <span class="indent">print('Suksess')</span><br><br><!--indent klassen gir innrykk-->
                         >>> C:<span class="color">\Users\apparat\5058-Bergen\Damsgårdsveien_82</span><br>
                         <span id="stor_footer">>>> print('Hello, World!' + \n + 'Velkommen til Apparat')</span>
                         <span id="liten_footer">>>> print('Hello, World!')<br>>>> print('Velkommen til Apparat')</span>
                     </p>
                 </div>
 
+                <!--google maps til større skjerm-->
                 <div id="image">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13011.126205377192!2d5.316913710288535!3d60.38385004664802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x463cfb93e4e2dd8f%3A0x9b7525e14b088fe4!2sApparat%20AS!5e0!3m2!1sno!2sno!4v1581426388563!5m2!1sno!2sno"  width="500px" height="200" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                 </div>
 
+                <!--google maps til mindre skjerm-->
                 <div id="mobil_maps">
                     <div id="image2">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13011.126205377192!2d5.316913710288535!3d60.38385004664802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x463cfb93e4e2dd8f%3A0x9b7525e14b088fe4!2sApparat%20AS!5e0!3m2!1sno!2sno!4v1581426388563!5m2!1sno!2sno"  width="500px" height="200" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
