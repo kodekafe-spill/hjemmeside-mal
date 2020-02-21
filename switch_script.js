@@ -1,3 +1,5 @@
+/*Dette scriptet bytter på å vise de ulike hoved-divene ettersom man klikke på de forskjellige linkene i header. Den man klikker på vises mens resten får display:none og gjemmes*/
+/*funksjonene kalles i navbar-linkene på html-sidene*/
 
     function hjem() {
         var home = document.getElementById("hjem");
