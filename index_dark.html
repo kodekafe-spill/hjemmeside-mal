@@ -4,15 +4,14 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Kodekafé</title>
-        <link type="text/css" rel="stylesheet" media="all" href="darkstyle.css" id="theme_css">
+        <link type="text/css" rel="stylesheet" media="all" href="css/darkstyle.css" id="theme_css">
         <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300&display=swap" rel="stylesheet"><!--fonten som brukes-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" ><!--siden som henter hamburger- og toggle-ikonene-->
-        <link rel="icon" href="ikon.png"><!--lite ikon i fanen-->
-        <script type="text/javascript" src="script.js"></script> <!--script som sikrer at siden er lastet før man kan klikke i navbar-->
-        <script type="text/javascript" src="switch_script.js"></script><!--script som bytter på å vise hoved-divs-->
+        <link rel="icon" href="images/ikon.png"><!--lite ikon i fanen-->
+        <script type="text/javascript" src="js/script.js"></script> <!--script som sikrer at siden er lastet før man kan klikke i navbar-->
+        <script type="text/javascript" src="js/switch_script.js"></script><!--script som bytter på å vise hoved-divs-->
     </head>
     <body>
-    
         <div id="leftcolumn">
             <div id="next">
                 <br><br><br><br><br>
@@ -87,7 +86,7 @@
                 <!--toggle-knapp for å bytte design er link til den mørke versjonen-->
                 <div id="switch"><a href="index_light.html"><i class="fa fa-toggle-on"></i></a></div>
                  <!--navbar-logo vises bare på små skjermer hvor stor logo ikke har plass-->
-                <div id="navbar-logo"><img src="baretekst_logo.png" style="z-index: -1;" height="50px"></div>
+                <div id="navbar-logo"><img src="images/baretekst_logo.png" style="z-index: -1;" height="50px"></div>
                 
                     <!--her kalles funksjonene som bytter på å vise ulike divs når du klikker på dem-->
                     <ul class="main-nav" id="js-menu">
@@ -98,8 +97,8 @@
                     </ul>
             </nav>
 
-            <div id="logo" style="z-index: -1;"><img src="logo.png" height="400px"></div><!--negativ z-index for å ikke kollidere med navigasjonsbar-->
-            <div id="lilla" style="z-index: -2;"><img id="lillabilde" src="lilla.png" height="600px"></div><!--negativ z-index for å ikke kollidere med navigasjonsbar eller logobilde-->
+            <div id="logo" style="z-index: -1;"><img src="images/logo.png" height="400px"></div><!--negativ z-index for å ikke kollidere med navigasjonsbar-->
+            <div id="lilla" style="z-index: -2;"><img id="lillabilde" src="images/lilla.png" height="600px"></div><!--negativ z-index for å ikke kollidere med navigasjonsbar eller logobilde-->
 
              <!--hoved-div "hjem"-->
             <div id="hjem">

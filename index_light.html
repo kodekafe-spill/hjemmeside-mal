@@ -4,15 +4,14 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Kodekafé</title>
-        <link rel="stylesheet" href="lightstyle.css">
+        <link rel="stylesheet" href="css/lightstyle.css">
         <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400&display=swap" rel="stylesheet"><!--fonten som brukes-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!--siden som henter hamburger- og toggle-ikonene-->
-        <link rel="icon" href="light_logo.png"><!--lite ikon i fanen-->
-        <script type="text/javascript" src="script.js"></script> <!--script som sikrer at siden er lastet før man kan klikke i navbar-->
-        <script type="text/javascript" src="switch_script.js"></script><!--script som bytter på å vise hoved-divs-->
+        <link rel="icon" href="images/light_logo.png"><!--lite ikon i fanen-->
+        <script type="text/javascript" src="js/script.js"></script> <!--script som sikrer at siden er lastet før man kan klikke i navbar-->
+        <script type="text/javascript" src="js/switch_script.js"></script><!--script som bytter på å vise hoved-divs-->
     </head>
     <body>
-    
         <div id="leftcolumn">
             <div id="next">
                 <br><br><br><br><br>
@@ -36,8 +35,7 @@
                 <!--toggle-knapp for å bytte design er link til den mørke versjonen-->
                 <div id="switch"><a href="index_dark.html"><i class="fa fa-toggle-off"></i></a></div>
                 <!--navbar-logo vises bare på små skjermer hvor stor logo ikke har plass-->
-                <div id="navbar-logo"><img src="baretekst_logo_light.png" style="z-index: -1;" height="50px"></div>
-                
+                <div id="navbar-logo"><img src="images/baretekst_logo_light.png" style="z-index: -1;" height="50px"></div>
                 <!--her kalles funksjonene som bytter på å vise ulike divs når du klikker på dem-->
                 <ul class="main-nav" id="js-menu">
                     <li><a href="#" onclick="hjem()"  class="nav-links">HJEM</a></li>
@@ -47,8 +45,8 @@
                 </ul>
             </nav>
 
-            <div id="logo" style="z-index: -1;"><img src="light_logo_cut.png" height="400px"></div><!--negativ z-index for å ikke kollidere med navigasjonsbar-->
-            <div id="grey" style="z-index: -2;"><img id="grey_picture" src="element_grå.png" height="600px"></div><!--negativ z-index for å ikke kollidere med navigasjonsbar eller logobilde-->
+            <div id="logo" style="z-index: -1;"><img src="images/light_logo_cut.png" height="400px"></div><!--negativ z-index for å ikke kollidere med navigasjonsbar-->
+            <div id="grey" style="z-index: -2;"><img id="grey_picture" src="images/element_grå.png" height="600px"></div><!--negativ z-index for å ikke kollidere med navigasjonsbar eller logobilde-->
 
             <!--Hoved-div til hjem-->
             <div id="hjem">
